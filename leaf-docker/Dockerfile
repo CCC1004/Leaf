@@ -6,4 +6,4 @@ COPY leaf.jar /app
 
 ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "/app/leaf.jar"]
 
-EXPOSE 8080,2182
+EXPOSE 8080 2182
