@@ -5,6 +5,7 @@ services:
     container_name: leaf-server
     ports:
       - 8080:8080
+      - 2182:2182
     depends_on:
       - leaf-zookeeper
     links:
