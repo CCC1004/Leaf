@@ -1,0 +1,7 @@
+version: '3.1'
+services:
+  leaf-server:
+    image: leaf-server
+    container_name: leaf-server
+    ports:
+    - 8080:8080
