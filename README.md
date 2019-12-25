@@ -14,6 +14,38 @@ At present, Leaf covers Meituan review company's internal finance, catering, tak
 
 You can use it to encapsulate a distributed unique id distribution center in a service-oriented SOA architecture as the id distribution provider for all applications
 
+## Docker
+
+Snowflake algorithm is enabled by default .
+
+### clone
+
+```bash
+git clone https://github.com/funtl/Leaf.git
+cd Leaf
+mvn clean install -DskipTests
+```
+
+### build
+
+```bash
+cd leaf-docker
+chmod +x build.sh
+./build.sh
+```
+
+### run
+
+```bash
+docker-compose up -d
+```
+
+### test snowflake
+
+```shell
+curl http://localhost:8080/api/snowflake/get/test
+```
+
 ## Quick Start
 
 ### Leaf Server

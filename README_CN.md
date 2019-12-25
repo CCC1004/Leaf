@@ -14,6 +14,38 @@ Leaf 最早期需求是各个业务线的订单ID生成需求。在美团早期�
 
 目前Leaf覆盖了美团点评公司内部金融、餐饮、外卖、酒店旅游、猫眼电影等众多业务线。在4C8G VM基础上，通过公司RPC方式调用，QPS压测结果近5w/s，TP999 1ms。
 
+## Docker
+
+默认开启了雪花算法
+
+### clone
+
+```bash
+git clone https://github.com/funtl/Leaf.git
+cd Leaf
+mvn clean install -DskipTests
+```
+
+### build
+
+```bash
+cd leaf-docker
+chmod +x build.sh
+./build.sh
+```
+
+### run
+
+```bash
+docker-compose up -d
+```
+
+### test snowflake
+
+```shell
+curl http://localhost:8080/api/snowflake/get/test
+```
+
 ## Quick Start
 
 ### Leaf Server
